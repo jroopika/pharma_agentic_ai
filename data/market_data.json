@@ -1,11 +1,58 @@
 {
-  "market_insights": {
-    "segment": "Metabolic oncology",
-    "gap_score": 8.2,
-    "rationale": "High unmet need for metabolic modulators in oncology; few approved indications and fragmented competition.",
-    "estimated_addressable_market_usd_m": 450,
-    "key_competitors": ["BigPharmA", "SmallBio LLC"],
-    "payer_pressure": "Moderate",
-    "recommended_strategy": "Pursue low-cost reformulation + biomarker-led trial to de-risk adoption."
-  }
+  "market_insights": [
+    {
+      "segment": "Metabolic oncology",
+      "gap_score": 8.2,
+      "rationale": "High unmet need for metabolic modulators in oncology; few approved indications and fragmented competition.",
+      "estimated_addressable_market_usd_m": 450,
+      "key_competitors": ["BigPharmA", "SmallBio LLC"],
+      "payer_pressure": "Moderate",
+      "recommended_strategy": "Pursue low-cost reformulation + biomarker-led trial to de-risk adoption."
+    },
+    {
+      "segment": "Cardiovascular prevention",
+      "gap_score": 6.5,
+      "rationale": "Established market with generic competition; opportunity in novel formulations and combination therapies.",
+      "estimated_addressable_market_usd_m": 1200,
+      "key_competitors": ["Bayer", "Johnson & Johnson", "Generic manufacturers"],
+      "payer_pressure": "High",
+      "recommended_strategy": "Focus on differentiated formulations with improved safety or convenience profiles."
+    },
+    {
+      "segment": "Pulmonary arterial hypertension",
+      "gap_score": 7.8,
+      "rationale": "Rare disease market with high unmet need; limited treatment options and premium pricing opportunity.",
+      "estimated_addressable_market_usd_m": 320,
+      "key_competitors": ["Pfizer", "Actelion", "United Therapeutics"],
+      "payer_pressure": "Low",
+      "recommended_strategy": "Leverage orphan drug status and develop combination therapies for treatment-resistant patients."
+    },
+    {
+      "segment": "Autoimmune diseases",
+      "gap_score": 7.1,
+      "rationale": "Growing market driven by aging population; opportunity for safer, more effective treatments.",
+      "estimated_addressable_market_usd_m": 850,
+      "key_competitors": ["AbbVie", "Johnson & Johnson", "Roche"],
+      "payer_pressure": "Moderate",
+      "recommended_strategy": "Develop biomarker-guided therapy approach to improve response rates and reduce adverse effects."
+    },
+    {
+      "segment": "Dermatology/aesthetics",
+      "gap_score": 6.8,
+      "rationale": "Consumer-driven market with growing acceptance of cosmetic treatments; opportunity in novel delivery systems.",
+      "estimated_addressable_market_usd_m": 280,
+      "key_competitors": ["Johnson & Johnson", "Rogaine", "Various generics"],
+      "payer_pressure": "High",
+      "recommended_strategy": "Focus on premium formulations with enhanced efficacy and patient experience."
+    },
+    {
+      "segment": "Oncology supportive care",
+      "gap_score": 8.9,
+      "rationale": "Critical unmet need for managing cancer treatment side effects; high willingness to pay for effective solutions.",
+      "estimated_addressable_market_usd_m": 650,
+      "key_competitors": ["Celgene", "Bristol Myers Squibb", "Takeda"],
+      "payer_pressure": "Low",
+      "recommended_strategy": "Develop companion diagnostics to identify patients most likely to benefit from treatment."
+    }
+  ]
 }

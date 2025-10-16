@@ -32,6 +32,116 @@
       "results": "Reduced adenoma count in a subset of patients with hyperinsulinemia.",
       "start_date": "2012-03-10",
       "end_date": "2016-11-20"
+    },
+    {
+      "id": "NCT00000004",
+      "drug": "Aspirin",
+      "indication": "Cardiovascular Disease Prevention",
+      "phase": "Phase 3",
+      "status": "Completed",
+      "summary": "Low-dose aspirin for primary prevention of cardiovascular events in high-risk patients.",
+      "results": "Significant reduction in myocardial infarction risk, increased bleeding risk.",
+      "start_date": "2005-03-15",
+      "end_date": "2012-08-20"
+    },
+    {
+      "id": "NCT00000005",
+      "drug": "Aspirin",
+      "indication": "Colorectal Cancer Prevention",
+      "phase": "Phase 2",
+      "status": "Active, recruiting",
+      "summary": "Evaluating aspirin's anti-inflammatory effects on colorectal adenoma formation.",
+      "results": "Interim analysis shows 20% reduction in adenoma formation.",
+      "start_date": "2020-01-10",
+      "end_date": null
+    },
+    {
+      "id": "NCT00000006",
+      "drug": "Sildenafil",
+      "indication": "Pulmonary Arterial Hypertension",
+      "phase": "Phase 3",
+      "status": "Completed",
+      "summary": "Sildenafil citrate for treatment of pulmonary arterial hypertension in adults.",
+      "results": "Improved exercise capacity and hemodynamic parameters.",
+      "start_date": "2003-06-01",
+      "end_date": "2005-12-15"
+    },
+    {
+      "id": "NCT00000007",
+      "drug": "Sildenafil",
+      "indication": "Heart Failure with Preserved Ejection Fraction",
+      "phase": "Phase 2",
+      "status": "Terminated",
+      "summary": "Investigating sildenafil for diastolic heart failure treatment.",
+      "results": "No significant improvement in primary endpoints; study terminated.",
+      "start_date": "2018-03-01",
+      "end_date": "2020-11-30"
+    },
+    {
+      "id": "NCT00000008",
+      "drug": "Thalidomide",
+      "indication": "Multiple Myeloma",
+      "phase": "Phase 3",
+      "status": "Completed",
+      "summary": "Thalidomide maintenance therapy in newly diagnosed multiple myeloma patients.",
+      "results": "Significant improvement in progression-free survival.",
+      "start_date": "2008-02-15",
+      "end_date": "2014-07-30"
+    },
+    {
+      "id": "NCT00000009",
+      "drug": "Thalidomide",
+      "indication": "Erythema Nodosum Leprosum",
+      "phase": "Phase 2",
+      "status": "Completed",
+      "summary": "Thalidomide for severe erythema nodosum leprosum in leprosy patients.",
+      "results": "Rapid and sustained improvement in skin lesions.",
+      "start_date": "2015-09-01",
+      "end_date": "2017-12-15"
+    },
+    {
+      "id": "NCT00000010",
+      "drug": "Hydroxychloroquine",
+      "indication": "Rheumatoid Arthritis",
+      "phase": "Phase 3",
+      "status": "Completed",
+      "summary": "Hydroxychloroquine as disease-modifying antirheumatic drug in early RA.",
+      "results": "Moderate improvement in joint symptoms and inflammation markers.",
+      "start_date": "2010-04-20",
+      "end_date": "2013-10-15"
+    },
+    {
+      "id": "NCT00000011",
+      "drug": "Hydroxychloroquine",
+      "indication": "Systemic Lupus Erythematosus",
+      "phase": "Phase 2",
+      "status": "Active, recruiting",
+      "summary": "Long-term hydroxychloroquine therapy for lupus flare prevention.",
+      "results": "Ongoing study; preliminary data shows reduced flare frequency.",
+      "start_date": "2021-06-01",
+      "end_date": null
+    },
+    {
+      "id": "NCT00000012",
+      "drug": "Minoxidil",
+      "indication": "Androgenetic Alopecia",
+      "phase": "Phase 3",
+      "status": "Completed",
+      "summary": "Topical minoxidil for male and female pattern baldness treatment.",
+      "results": "Significant hair regrowth in 65% of participants.",
+      "start_date": "2016-01-15",
+      "end_date": "2018-12-20"
+    },
+    {
+      "id": "NCT00000013",
+      "drug": "Minoxidil",
+      "indication": "Alopecia Areata",
+      "phase": "Phase 2",
+      "status": "Completed",
+      "summary": "Investigating minoxidil efficacy in patchy hair loss conditions.",
+      "results": "Modest improvement; combination therapy shows promise.",
+      "start_date": "2019-03-01",
+      "end_date": "2021-08-30"
     }
   ]
 }

@@ -17,6 +17,78 @@
       "title": "Metabolic reprogramming by metformin in colorectal adenomas",
       "abstract": "Clinical biomarker studies show metformin reduces insulin and IGF-1 pathway activity and may decrease adenoma recurrence in hyperinsulinemic patients.",
       "year": 2015
+    },
+    {
+      "pmid": "30000004",
+      "title": "Aspirin's dual role in cardiovascular protection and cancer prevention",
+      "abstract": "Low-dose aspirin inhibits COX-1 mediated platelet aggregation while also modulating inflammatory pathways implicated in carcinogenesis. Long-term use shows protective effects against colorectal cancer.",
+      "year": 2019
+    },
+    {
+      "pmid": "30000005",
+      "title": "Mechanisms of aspirin resistance in cardiovascular patients",
+      "abstract": "Genetic polymorphisms in COX-1 and drug metabolism enzymes contribute to variable aspirin response. Platelet function testing may guide personalized antiplatelet therapy approaches.",
+      "year": 2020
+    },
+    {
+      "pmid": "30000006",
+      "title": "Sildenafil's nitric oxide pathway modulation in pulmonary hypertension",
+      "abstract": "Sildenafil inhibits phosphodiesterase-5, enhancing cGMP signaling and promoting pulmonary vasodilation. Clinical studies demonstrate improved exercise capacity and hemodynamics in PAH patients.",
+      "year": 2017
+    },
+    {
+      "pmid": "30000007",
+      "title": "Unexpected cardiac benefits of sildenafil in heart failure",
+      "abstract": "Preclinical studies suggest sildenafil may improve diastolic function through cGMP-mediated mechanisms. However, clinical trials in heart failure with preserved ejection fraction showed mixed results.",
+      "year": 2018
+    },
+    {
+      "pmid": "30000008",
+      "title": "Thalidomide's immunomodulatory effects in multiple myeloma",
+      "abstract": "Thalidomide demonstrates anti-angiogenic and immunomodulatory properties through TNF-alpha inhibition and T-cell co-stimulation. Combination with conventional chemotherapy improves outcomes in myeloma patients.",
+      "year": 2014
+    },
+    {
+      "pmid": "30000009",
+      "title": "Teratogenicity mechanisms and modern applications of thalidomide",
+      "abstract": "Understanding of thalidomide's teratogenic mechanisms led to strict prescribing protocols. Modern applications in oncology and inflammatory diseases capitalize on its unique immunomodulatory properties.",
+      "year": 2016
+    },
+    {
+      "pmid": "30000010",
+      "title": "Hydroxychloroquine's lysosomal effects in autoimmune diseases",
+      "abstract": "Hydroxychloroquine accumulates in lysosomes, altering pH and interfering with antigen processing. This mechanism underlies its efficacy in rheumatoid arthritis and lupus treatment.",
+      "year": 2021
+    },
+    {
+      "pmid": "30000011",
+      "title": "Antimalarial drugs as autophagy modulators in cancer therapy",
+      "abstract": "Hydroxychloroquine and chloroquine inhibit autophagy, a cellular recycling process often dysregulated in cancer. Clinical trials investigate their potential as cancer therapy sensitizers.",
+      "year": 2019
+    },
+    {
+      "pmid": "30000012",
+      "title": "Minoxidil's potassium channel activation and hair growth mechanisms",
+      "abstract": "Minoxidil opens ATP-sensitive potassium channels, promoting vasodilation and nutrient delivery to hair follicles. Topical application stimulates anagen phase transition and hair shaft diameter increase.",
+      "year": 2020
+    },
+    {
+      "pmid": "30000013",
+      "title": "Systemic effects of topical minoxidil: cardiovascular considerations",
+      "abstract": "While topical minoxidil has minimal systemic absorption, case reports describe cardiovascular effects in sensitive individuals. Monitoring recommended in patients with pre-existing cardiac conditions.",
+      "year": 2018
+    },
+    {
+      "pmid": "30000014",
+      "title": "Drug repurposing strategies in pharmaceutical innovation",
+      "abstract": "Systematic approaches to drug repurposing include computational screening, phenotypic profiling, and network-based methods. Successful examples demonstrate reduced development timelines and costs.",
+      "year": 2022
+    },
+    {
+      "pmid": "30000015",
+      "title": "Machine learning approaches to identify drug repurposing opportunities",
+      "abstract": "AI-driven analysis of genomic, proteomic, and clinical data reveals novel therapeutic applications for existing drugs. Integration of multiple data types improves prediction accuracy for successful repurposing.",
+      "year": 2023
     }
   ]
 }

@@ -15,6 +15,70 @@
       "status": "Abandoned",
       "claims_summary": "Modified biguanide derivatives with enhanced uptake in tumor cells.",
       "relevance": "Derivative compounds; not covering plain metformin."
+    },
+    {
+      "patent_id": "US7654321B2",
+      "title": "Aspirin formulations for cardiovascular protection",
+      "assignee": "CardioPharm Inc",
+      "status": "Active",
+      "claims_summary": "Enteric-coated aspirin compositions for extended release and reduced GI side effects.",
+      "relevance": "Covers specific formulations but not basic aspirin use."
+    },
+    {
+      "patent_id": "EP2019876543A1",
+      "title": "Low-dose aspirin for cancer prevention",
+      "assignee": "OncoPrevent Ltd",
+      "status": "Pending",
+      "claims_summary": "Methods of using low-dose aspirin for reducing colorectal cancer risk.",
+      "relevance": "Specific cancer prevention claims; potential blocking patent."
+    },
+    {
+      "patent_id": "US6543210A1",
+      "title": "Sildenafil citrate compositions",
+      "assignee": "Pfizer Inc",
+      "status": "Expired",
+      "claims_summary": "Basic sildenafil citrate formulations and methods of use for erectile dysfunction.",
+      "relevance": "Original composition patents expired; generic entry possible."
+    },
+    {
+      "patent_id": "WO2016543210A1",
+      "title": "Sildenafil for pulmonary arterial hypertension treatment",
+      "assignee": "Pfizer Inc",
+      "status": "Active",
+      "claims_summary": "Methods of treating PAH with sildenafil, specific dosing regimens.",
+      "relevance": "Active patents covering PAH indication; strong IP protection."
+    },
+    {
+      "patent_id": "US8765432B1",
+      "title": "Thalidomide analogs for immunomodulation",
+      "assignee": "Celgene Corporation",
+      "status": "Active",
+      "claims_summary": "Novel thalidomide analogs with improved safety profiles for cancer treatment.",
+      "relevance": "Covers derivative compounds; original thalidomide patents expired."
+    },
+    {
+      "patent_id": "EP2020123456A1",
+      "title": "Hydroxychloroquine combination therapies",
+      "assignee": "AutoImmune Therapeutics",
+      "status": "Pending",
+      "claims_summary": "Combination of hydroxychloroquine with biologics for autoimmune diseases.",
+      "relevance": "Combination therapy patents; basic HCQ use remains open."
+    },
+    {
+      "patent_id": "US5432167A1",
+      "title": "Minoxidil topical formulations",
+      "assignee": "Upjohn Company",
+      "status": "Expired",
+      "claims_summary": "Topical minoxidil solutions and methods for treating androgenetic alopecia.",
+      "relevance": "Basic patents expired; generic formulations widely available."
+    },
+    {
+      "patent_id": "WO2021987654A1",
+      "title": "Enhanced minoxidil delivery systems",
+      "assignee": "HairTech Solutions",
+      "status": "Active",
+      "claims_summary": "Novel delivery systems for improved minoxidil penetration and efficacy.",
+      "relevance": "Formulation patents; basic minoxidil use remains unpatented."
     }
   ]
 }
