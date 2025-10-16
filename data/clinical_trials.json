@@ -1,0 +1,37 @@
+{
+  "trials": [
+    {
+      "id": "NCT00000001",
+      "drug": "Metformin",
+      "indication": "Polycystic Ovary Syndrome (PCOS)",
+      "phase": "Phase 3",
+      "status": "Completed",
+      "summary": "Metformin evaluated for insulin-sensitizing effects and menstrual regulation in women with PCOS.",
+      "results": "Improved ovulatory frequency and insulin sensitivity compared to placebo.",
+      "start_date": "2010-01-15",
+      "end_date": "2014-06-30"
+    },
+    {
+      "id": "NCT00000002",
+      "drug": "Metformin",
+      "indication": "Breast Cancer (adjunct therapy)",
+      "phase": "Phase 2",
+      "status": "Active, not recruiting",
+      "summary": "Evaluating metformin as adjuvant therapy to reduce recurrence in early-stage breast cancer patients with metabolic syndrome.",
+      "results": "Preliminary signals of improved metabolic biomarkers; efficacy outcomes pending.",
+      "start_date": "2018-05-01",
+      "end_date": null
+    },
+    {
+      "id": "NCT00000003",
+      "drug": "Metformin",
+      "indication": "Colorectal Cancer Prevention",
+      "phase": "Phase 2",
+      "status": "Completed",
+      "summary": "Low-dose metformin given to high-risk patients to evaluate adenoma recurrence.",
+      "results": "Reduced adenoma count in a subset of patients with hyperinsulinemia.",
+      "start_date": "2012-03-10",
+      "end_date": "2016-11-20"
+    }
+  ]
+}

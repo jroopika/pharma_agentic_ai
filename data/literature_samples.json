@@ -1,0 +1,22 @@
+{
+  "articles": [
+    {
+      "pmid": "30000001",
+      "title": "Metformin induces AMPK activation and inhibits mTOR signaling in breast cancer cells",
+      "abstract": "Preclinical studies demonstrate that metformin activates AMP-activated protein kinase (AMPK), leading to downstream inhibition of mTOR and reduced proliferation in breast cancer cell lines. Synergy with chemotherapy observed in vitro.",
+      "year": 2016
+    },
+    {
+      "pmid": "30000002",
+      "title": "Population analysis of metformin use and reduced cancer incidence",
+      "abstract": "Epidemiological studies show an association between metformin use and lower incidence of several cancers, though confounding by indication and metabolic health remains a concern.",
+      "year": 2018
+    },
+    {
+      "pmid": "30000003",
+      "title": "Metabolic reprogramming by metformin in colorectal adenomas",
+      "abstract": "Clinical biomarker studies show metformin reduces insulin and IGF-1 pathway activity and may decrease adenoma recurrence in hyperinsulinemic patients.",
+      "year": 2015
+    }
+  ]
+}

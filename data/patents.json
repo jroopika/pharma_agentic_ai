@@ -1,0 +1,20 @@
+{
+  "patents": [
+    {
+      "patent_id": "US2010000001A1",
+      "title": "Metformin compositions and methods",
+      "assignee": "PharmaCorp",
+      "status": "Expired",
+      "claims_summary": "General compositions and dosing for metabolic disorders.",
+      "relevance": "General metabolic use; no specific oncology claims."
+    },
+    {
+      "patent_id": "WO2018001234A1",
+      "title": "Metformin derivatives for cancer therapy",
+      "assignee": "SmallBio LLC",
+      "status": "Abandoned",
+      "claims_summary": "Modified biguanide derivatives with enhanced uptake in tumor cells.",
+      "relevance": "Derivative compounds; not covering plain metformin."
+    }
+  ]
+}

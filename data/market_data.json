@@ -1,0 +1,11 @@
+{
+  "market_insights": {
+    "segment": "Metabolic oncology",
+    "gap_score": 8.2,
+    "rationale": "High unmet need for metabolic modulators in oncology; few approved indications and fragmented competition.",
+    "estimated_addressable_market_usd_m": 450,
+    "key_competitors": ["BigPharmA", "SmallBio LLC"],
+    "payer_pressure": "Moderate",
+    "recommended_strategy": "Pursue low-cost reformulation + biomarker-led trial to de-risk adoption."
+  }
+}
