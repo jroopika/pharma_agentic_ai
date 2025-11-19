@@ -1,0 +1,134 @@
+// Jenkinsfile for deploying to Tomcat
+// This pipeline demonstrates proper configuration for deploying WAR files to Tomcat 9.x
+
+pipeline {
+    agent any
+    
+    // Environment variables
+    environment {
+        // Maven settings
+        MAVEN_HOME = tool 'Maven 3.8'
+        PATH = "${MAVEN_HOME}/bin:${env.PATH}"
+        
+        // Tomcat settings
+        TOMCAT_URL = 'http://localhost:8080'
+        TOMCAT_CREDENTIALS_ID = 'tomcat-deployer'
+        
+        // Application settings
+        APP_CONTEXT = 'webdemo'
+        WAR_FILE = 'target/webdemo.war'
+    }
+    
+    stages {
+        stage('Checkout') {
+            steps {
+                echo 'Checking out source code...'
+                checkout scm
+            }
+        }
+        
+        stage('Build') {
+            steps {
+                echo 'Building application...'
+                sh 'mvn clean package -DskipTests'
+            }
+        }
+        
+        stage('Test') {
+            steps {
+                echo 'Running tests...'
+                sh 'mvn test'
+            }
+            post {
+                always {
+                    junit '**/target/surefire-reports/*.xml'
+                }
+            }
+        }
+        
+        stage('Deploy to Tomcat') {
+            steps {
+                echo "Deploying ${WAR_FILE} to Tomcat at ${TOMCAT_URL}"
+                
+                // Using the Deploy Plugin
+                deploy adapters: [
+                    tomcat9(
+                        credentialsId: "${TOMCAT_CREDENTIALS_ID}",
+                        path: '',
+                        url: "${TOMCAT_URL}"
+                    )
+                ], 
+                contextPath: "${APP_CONTEXT}",
+                war: "${WAR_FILE}"
+            }
+        }
+        
+        stage('Verify Deployment') {
+            steps {
+                echo 'Verifying deployment...'
+                script {
+                    def response = sh(
+                        script: "curl -s -o /dev/null -w '%{http_code}' ${TOMCAT_URL}/${APP_CONTEXT}/",
+                        returnStdout: true
+                    ).trim()
+                    
+                    if (response == '200') {
+                        echo "✅ Deployment verified successfully (HTTP ${response})"
+                    } else {
+                        error "❌ Deployment verification failed (HTTP ${response})"
+                    }
+                }
+            }
+        }
+    }
+    
+    post {
+        success {
+            echo '✅ Pipeline completed successfully!'
+            echo "Application deployed to: ${TOMCAT_URL}/${APP_CONTEXT}"
+        }
+        failure {
+            echo '❌ Pipeline failed!'
+            echo 'Check the logs above for details.'
+            echo 'Common issues:'
+            echo '  - 401 Unauthorized: Check Tomcat credentials and manager-script role'
+            echo '  - 403 Forbidden: Verify user has manager-script role in tomcat-users.xml'
+            echo '  - Connection refused: Ensure Tomcat is running on port 8080'
+        }
+        always {
+            // Clean up workspace if needed
+            cleanWs(deleteDirs: true, 
+                    patterns: [[pattern: 'target/**', type: 'INCLUDE']])
+        }
+    }
+}
+
+/*
+CONFIGURATION CHECKLIST:
+
+1. JENKINS CREDENTIALS:
+   - Go to: Manage Jenkins → Manage Credentials
+   - Add new credential with ID: tomcat-deployer
+   - Username: deployer (must match tomcat-users.xml)
+   - Password: Your secure password
+   
+2. TOMCAT CONFIGURATION (TOMCAT_HOME/conf/tomcat-users.xml):
+   <role rolename="manager-script"/>
+   <user username="deployer" password="your_password" roles="manager-script"/>
+   
+3. REQUIRED JENKINS PLUGINS:
+   - Deploy to container Plugin
+   - Pipeline Plugin
+   - Maven Integration Plugin
+   
+4. VERIFY:
+   - Tomcat is running on port 8080
+   - Manager application is deployed
+   - Credentials match between Jenkins and Tomcat
+   - Tomcat was restarted after config changes
+
+TROUBLESHOOTING:
+- 401 Error: See docs/TROUBLESHOOTING.md
+- Connection issues: Verify Tomcat is running
+- WAR not found: Check Maven build output
+*/

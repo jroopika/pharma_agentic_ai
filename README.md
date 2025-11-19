@@ -203,3 +203,10 @@ python -c "from agents.master_agent import MasterAgent; m=MasterAgent(); print(m
 - **Scalability**: Database backend, caching, async processing
 - **Monitoring**: Logging, error tracking, performance metrics
 - **Deployment**: Docker containers, cloud deployment, CI/CD
+
+## 📦 Deployment
+
+For production deployment with Jenkins and Tomcat:
+- **[Deployment Guide](docs/DEPLOYMENT.md)**: Complete guide for Jenkins + Tomcat configuration
+- **[Troubleshooting](docs/TROUBLESHOOTING.md)**: Solutions for common deployment issues
+- **[Tomcat Config Sample](docs/tomcat-users.xml.sample)**: Sample Tomcat users configuration
