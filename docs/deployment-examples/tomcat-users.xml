@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Example Tomcat users configuration for Jenkins deployment
+  
+  Location: 
+  - Windows: C:\Program Files\Apache Software Foundation\Tomcat 9.0\conf\tomcat-users.xml
+  - Linux: /opt/tomcat/conf/tomcat-users.xml or /var/lib/tomcat9/conf/tomcat-users.xml
+  
+  IMPORTANT:
+  1. Change the passwords to strong, unique values
+  2. Restart Tomcat after modifying this file
+  3. Keep this file secure (permissions: 600 or rw-------)
+-->
+<tomcat-users xmlns="http://tomcat.apache.org/xml"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="http://tomcat.apache.org/xml tomcat-users.xsd"
+              version="1.0">
+  
+  <!-- Define roles for Tomcat Manager -->
+  <role rolename="manager-gui"/>
+  <role rolename="manager-script"/>
+  <role rolename="manager-jmx"/>
+  <role rolename="manager-status"/>
+  
+  <!--
+    GUI user for web browser access
+    Use this account to access Tomcat Manager via web interface
+    DO NOT use this account in Jenkins (CSRF protection)
+  -->
+  <user username="admin" 
+        password="CHANGE_THIS_PASSWORD_123!" 
+        roles="manager-gui,manager-status"/>
+  
+  <!--
+    Deployment user for Jenkins/CI systems
+    Use this account in Jenkins "Deploy to container" configuration
+    This is the account that fixes the 401 Unauthorized error
+  -->
+  <user username="deployer" 
+        password="CHANGE_THIS_PASSWORD_456!" 
+        roles="manager-script,manager-status"/>
+  
+  <!--
+    Optional: Monitoring user (read-only)
+    For monitoring tools that only need status information
+  -->
+  <user username="monitor" 
+        password="CHANGE_THIS_PASSWORD_789!" 
+        roles="manager-status"/>
+
+</tomcat-users>
