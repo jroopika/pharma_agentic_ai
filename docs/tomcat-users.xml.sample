@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Sample Tomcat Users Configuration for Jenkins Deployment
+  
+  This file should be placed at: TOMCAT_HOME/conf/tomcat-users.xml
+  
+  SECURITY WARNING:
+  - Replace default passwords with strong, unique passwords
+  - Restrict network access to Tomcat Manager application
+  - Use HTTPS in production environments
+  - Do NOT commit real passwords to version control
+-->
+<tomcat-users xmlns="http://tomcat.apache.org/xml"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="http://tomcat.apache.org/xml tomcat-users.xsd"
+              version="1.0">
+  
+  <!-- 
+    Role Definitions:
+    - manager-gui: Browser-based access to Tomcat Manager
+    - manager-script: API/programmatic access for deployments (REQUIRED FOR JENKINS)
+    - manager-jmx: JMX proxy access
+    - manager-status: Read-only status page access
+  -->
+  <role rolename="manager-gui"/>
+  <role rolename="manager-script"/>
+  <role rolename="manager-jmx"/>
+  <role rolename="manager-status"/>
+  
+  <!--
+    GUI Admin User
+    Use this account for browser-based Tomcat Manager access
+    NOTE: Do NOT use this for Jenkins deployments
+  -->
+  <user username="admin" 
+        password="CHANGE_THIS_PASSWORD" 
+        roles="manager-gui,manager-status"/>
+  
+  <!--
+    Jenkins Deployment User
+    Use this account for automated deployments from Jenkins
+    This is the account that should be configured in Jenkins credentials
+    
+    IMPORTANT: 
+    - Only has manager-script role (required for API deployments)
+    - Does NOT have manager-gui role (security best practice)
+  -->
+  <user username="deployer" 
+        password="CHANGE_THIS_PASSWORD" 
+        roles="manager-script"/>
+  
+  <!--
+    Alternative: Combined roles for testing (NOT RECOMMENDED FOR PRODUCTION)
+    Uncomment only for development/testing environments
+  -->
+  <!--
+  <user username="devuser" 
+        password="CHANGE_THIS_PASSWORD" 
+        roles="manager-gui,manager-script,manager-status"/>
+  -->
+
+</tomcat-users>
