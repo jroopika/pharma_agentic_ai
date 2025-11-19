@@ -1,0 +1,119 @@
+// Example Jenkinsfile for building and deploying to Tomcat
+// This pipeline demonstrates how to properly deploy to Tomcat from Jenkins
+
+pipeline {
+    agent any
+    
+    tools {
+        maven 'Maven 3.6.3' // Configure in Jenkins Global Tool Configuration
+        jdk 'JDK 11'        // Configure in Jenkins Global Tool Configuration
+    }
+    
+    environment {
+        // Tomcat deployment settings
+        TOMCAT_URL = 'http://localhost:8080'
+        TOMCAT_CREDENTIALS = 'tomcat-deployer' // ID from Jenkins Credentials
+        APP_CONTEXT = 'webdemo' // Application context path
+    }
+    
+    stages {
+        stage('Checkout') {
+            steps {
+                // Checkout code from version control
+                checkout scm
+            }
+        }
+        
+        stage('Build') {
+            steps {
+                echo 'Building the application...'
+                // Build the WAR file using Maven
+                sh 'mvn clean package -DskipTests'
+            }
+        }
+        
+        stage('Test') {
+            steps {
+                echo 'Running tests...'
+                sh 'mvn test'
+            }
+            post {
+                always {
+                    // Archive test results
+                    junit '**/target/surefire-reports/*.xml'
+                }
+            }
+        }
+        
+        stage('Deploy to Tomcat') {
+            steps {
+                echo 'Deploying to Tomcat...'
+                
+                // Using the deploy plugin (Declarative Pipeline)
+                // Note: Requires "Deploy to container" plugin
+                script {
+                    deploy adapters: [
+                        tomcat9(
+                            credentialsId: "${TOMCAT_CREDENTIALS}",
+                            path: '',
+                            url: "${TOMCAT_URL}"
+                        )
+                    ], 
+                    contextPath: "${APP_CONTEXT}",
+                    war: 'target/*.war'
+                }
+            }
+        }
+    }
+    
+    post {
+        success {
+            echo 'Deployment successful!'
+            // Optional: Send notification
+            // emailext subject: "Deployment Success: ${env.JOB_NAME}",
+            //          body: "Application deployed successfully to ${TOMCAT_URL}/${APP_CONTEXT}",
+            //          to: "team@example.com"
+        }
+        failure {
+            echo 'Deployment failed!'
+            // Optional: Send notification
+            // emailext subject: "Deployment Failed: ${env.JOB_NAME}",
+            //          body: "Check Jenkins console output for details",
+            //          to: "team@example.com"
+        }
+        always {
+            // Clean up workspace
+            cleanWs()
+        }
+    }
+}
+
+/* 
+ * Alternative: Using curl for deployment (more flexible)
+ * 
+ * stage('Deploy to Tomcat via curl') {
+ *     steps {
+ *         withCredentials([usernamePassword(
+ *             credentialsId: "${TOMCAT_CREDENTIALS}",
+ *             usernameVariable: 'TOMCAT_USER',
+ *             passwordVariable: 'TOMCAT_PASS'
+ *         )]) {
+ *             script {
+ *                 // Undeploy existing application (if exists)
+ *                 sh '''
+ *                     curl -u ${TOMCAT_USER}:${TOMCAT_PASS} \
+ *                          "${TOMCAT_URL}/manager/text/undeploy?path=/${APP_CONTEXT}" \
+ *                          || echo "App not deployed yet"
+ *                 '''
+ *                 
+ *                 // Deploy new WAR file
+ *                 sh '''
+ *                     curl -u ${TOMCAT_USER}:${TOMCAT_PASS} \
+ *                          --upload-file target/*.war \
+ *                          "${TOMCAT_URL}/manager/text/deploy?path=/${APP_CONTEXT}&update=true"
+ *                 '''
+ *             }
+ *         }
+ *     }
+ * }
+ */

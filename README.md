@@ -9,6 +9,7 @@ A comprehensive multi-agent AI system for pharmaceutical research that analyzes 
 - **React Web Interface**: Modern UI for drug analysis and report download
 - **Comprehensive Testing**: Full pytest test suite with 95%+ coverage
 - **RESTful API**: Flask backend with CORS support for frontend integration
+- **Production Deployment**: Jenkins/Tomcat deployment guides and troubleshooting
 
 ## 🚀 Quick Start
 
@@ -203,3 +204,14 @@ python -c "from agents.master_agent import MasterAgent; m=MasterAgent(); print(m
 - **Scalability**: Database backend, caching, async processing
 - **Monitoring**: Logging, error tracking, performance metrics
 - **Deployment**: Docker containers, cloud deployment, CI/CD
+
+## 📦 Production Deployment
+
+For deploying to production environments with Jenkins and Tomcat:
+
+- **[Deployment Guide](DEPLOYMENT.md)** - Complete guide for Jenkins to Tomcat deployment
+- **[Configuration Examples](docs/deployment-examples/)** - Sample configuration files
+- **[Troubleshooting](docs/deployment-examples/TROUBLESHOOTING.md)** - Common issues and solutions
+
+**Quick Fix for 401 Unauthorized Error:**
+The Jenkins deployment requires Tomcat user with `manager-script` role (not `manager-gui`). See [DEPLOYMENT.md](DEPLOYMENT.md) for details.
